@@ -1,0 +1,13 @@
+ServerFacades/bin/*
+ServerFacades/obj/*
+ServerFacades/packages/*
+ServerFacadesTests/packages/*
+ServerFacadesTests/bin/*
+ServerFacadesTests/obj/*
+WebLauncher/bin/*
+WebLauncher/obj/*
+WebLauncher/packages/*
+WebLauncherTests/bin/*
+WebLauncherTests/obj/*
+WebLauncherTests/packages/*
+packages/*
