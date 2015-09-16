@@ -92,7 +92,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EntityFrameworkAndKnockout\WebLauncher.csproj">
+    <ProjectReference Include="..\WebLauncher\WebLauncher.csproj">
       <Project>{7148D011-32ED-4AD6-A154-40413D702031}</Project>
       <Name>WebLauncher</Name>
     </ProjectReference>
