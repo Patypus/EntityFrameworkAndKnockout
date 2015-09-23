@@ -16,6 +16,6 @@ namespace ServerFacades.Entities
 
         public int NumberOfPodiums { get; set; }
 
-        public int NUmberOfRaces { get; set; }
+        public int NumberOfRaces { get; set; }
     }
 }

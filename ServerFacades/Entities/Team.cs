@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace ServerFacades.Entities
 {
-    public class TeamInChampionship
+    public class Team
     {
-        public Guid TeamID { get; set; }
+        public int TeamId { get; set; }
 
         public String TeamName { get; set; }
+
+        public int RacesEntered { get; set; }
+
+        public List<int> ChampionshipYears { get; set; }
     }
 }
