@@ -49,8 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\ChampionshipYear.cs" />
     <Compile Include="Entities\Driver.cs" />
+    <Compile Include="Entities\Race.cs" />
+    <Compile Include="Entities\RaceResultPosition.cs" />
     <Compile Include="Entities\Team.cs" />
+    <Compile Include="Entities\YearDriverToTeamMapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
