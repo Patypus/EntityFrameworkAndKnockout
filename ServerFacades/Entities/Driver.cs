@@ -1,7 +1,10 @@
-﻿namespace ServerFacades.Entities
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ServerFacades.Entities
 {
     public class Driver
     {
+        [Key]
         public int DriverId { get; set; }
 
         public string Name { get; set; }

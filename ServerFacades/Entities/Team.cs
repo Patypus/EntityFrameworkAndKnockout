@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+
 namespace ServerFacades.Entities
 {
     public class Team
     {
-        public int TeamId { get; set; }
+        [Key]
+        public Guid TeamId { get; set; }
 
         public String TeamName { get; set; }
 
