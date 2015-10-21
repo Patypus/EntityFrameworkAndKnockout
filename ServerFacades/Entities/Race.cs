@@ -9,6 +9,8 @@ namespace ServerFacades.Entities
         [Key]
         public Guid RaceId { get; set; }
 
+        public int YearNumber { get; set; }
+
         public string RaceName { get; set; }
 
         public DateTime RaceDate { get; set; }

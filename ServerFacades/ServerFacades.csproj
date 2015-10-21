@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Context\Context.cs" />
     <Compile Include="Entities\ChampionshipYear.cs" />
     <Compile Include="Entities\Driver.cs" />
     <Compile Include="Entities\Race.cs" />
