@@ -13,5 +13,7 @@ namespace ServerFacades.Entities
         public int Position { get; set; }
 
         public int DriverId { get; set; }
+
+        public virtual Driver Driver { get; set; }
     }
 }

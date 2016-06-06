@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace ServerFacades.Entities
 {
@@ -14,5 +15,7 @@ namespace ServerFacades.Entities
         public int NumberOfPodiums { get; set; }
 
         public int NumberOfWins { get; set; }
+
+        public virtual ICollection<RaceResultPosition> RaceResultPossitions { get; set; }
     }
 }

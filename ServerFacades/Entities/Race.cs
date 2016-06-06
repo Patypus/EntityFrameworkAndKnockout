@@ -15,6 +15,6 @@ namespace ServerFacades.Entities
 
         public DateTime RaceDate { get; set; }
 
-        public IEnumerable<RaceResultPosition> Results { get; set; }
+        public ICollection<RaceResultPosition> Results { get; set; }
     }
 }
