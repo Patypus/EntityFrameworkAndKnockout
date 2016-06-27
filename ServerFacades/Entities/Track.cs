@@ -7,11 +7,15 @@ using System.Threading.Tasks;
 
 namespace ServerFacades.Entities
 {
-    public class DriverChampionshipYear
+    public class Track
     {
         [Key]
         public Guid Id { get; set; }
 
-        public 
+        public string Name { get; set; }
+
+        public int LapLengthMeters { get; set; }
+
+        public virtual ICollection<Race> Races { get; set; }
     }
 }

@@ -7,21 +7,17 @@ using System.Threading.Tasks;
 
 namespace ServerFacades.Entities
 {
-    public class RaceResultPosition
+    public class DriverChampionshipEntry
     {
         [Key]
         public Guid Id { get; set; }
-        
-        public Guid RaceId { get; set; }
 
-        public virtual Race Race { get; set; }
+        public Guid TeamChampionshipEntryId { get; set; }
 
         public Guid DriverId { get; set; }
 
+        public virtual TeamChampionshipEntry TeamChampionshipEntry { get; set; }
+
         public virtual Driver Driver { get; set; }
-
-        public Guid PositionDetailsId { get; set; }
-
-        public virtual PositionDetails PosiitonDetails { get; set; }
     }
 }

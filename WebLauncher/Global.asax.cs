@@ -10,13 +10,13 @@ using System.Web.Routing;
 
 namespace EntityFrameworkAndKnockout
 {
-    public class MvcApplication : System.Web.HttpApplication
+    public class MvcApplication : HttpApplication
     {
         protected void Application_Start()
         {
             using (var context = new Context())
             {
-                var d = new Driver { Name = "Bob", RacesEntered = 0, NumberOfPodiums = 0, NumberOfWins = 0 };
+                var d = new Driver { Name = "Bob" };
                 context.Drivers.Add(d);
                 context.SaveChanges();
             }

@@ -7,18 +7,14 @@ using System.Threading.Tasks;
 
 namespace ServerFacades.Entities
 {
-    public class Driver
+    public class PositionDetails
     {
         [Key]
         public Guid Id { get; set; }
 
-        public string Name { get; set; }
+        public int PosiitionNumber { get; set; }
 
-        public int Number { get; set; }
-
-        public bool Retired { get; set; }
-
-        public virtual ICollection<DriverChampionshipEntry> DriverChampionshipEntries { get; set; }
+        public int Points { get; set; }
 
         public virtual ICollection<RaceResultPosition> RaceResultPositions { get; set; }
     }

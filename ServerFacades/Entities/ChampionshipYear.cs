@@ -1,15 +1,21 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace ServerFacades.Entities
 {
     public class ChampionshipYear
     {
         [Key]
-        public int YearNumber { get; set; }
-        
-        public IEnumerable<YearDriverToTeamMapping> DriverToTeamMappings { get; set; }
-        
-        public IEnumerable<Race> Races { get; set; } 
+        public Guid Id { get; set; }
+
+        public int Year { get; set; }
+
+        public virtual ICollection<Race> Races { get; set; }
+
+        public virtual ICollection<TeamChampionshipEntry> TeamChampionshipEntrys { get; set; }
     }
 }
