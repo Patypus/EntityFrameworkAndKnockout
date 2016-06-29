@@ -92,9 +92,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WebLauncher\WebLauncher.csproj">
+    <ProjectReference Include="..\WebLauncher\WebInterface.csproj">
       <Project>{7148D011-32ED-4AD6-A154-40413D702031}</Project>
-      <Name>WebLauncher</Name>
+      <Name>WebInterface</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
