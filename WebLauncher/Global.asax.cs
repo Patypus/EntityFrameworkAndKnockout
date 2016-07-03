@@ -16,8 +16,8 @@ namespace EntityFrameworkAndKnockout
         {
             //using (var context = new Context())
             //{
-            //    var d = new Driver { Name = "Bob" };
-            //    context.Drivers.Add(d);
+            //    //var d = new Driver { Name = "Bob" };
+            //    //context.Drivers.Add(d);
             //    context.SaveChanges();
             //}
             AreaRegistration.RegisterAllAreas();
