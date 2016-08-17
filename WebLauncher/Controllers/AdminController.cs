@@ -14,5 +14,12 @@ namespace EntityFrameworkAndKnockout.Controllers
         {
             return View();
         }
+        
+        [HttpGet]
+        [Authorize]
+        public ActionResult AddSeason()
+        {
+            throw new NotImplementedException("Get on with it");
+        }
     }
 }

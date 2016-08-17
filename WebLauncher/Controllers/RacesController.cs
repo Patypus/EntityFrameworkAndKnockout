@@ -13,5 +13,12 @@ namespace EntityFrameworkAndKnockout.Controllers
         {
             return View();
         }
+
+        [HttpGet]
+        [Authorize]
+        public ActionResult Add()
+        {
+            throw new NotImplementedException("Get on with it.");
+        }
     }
 }

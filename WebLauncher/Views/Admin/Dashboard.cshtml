@@ -2,6 +2,31 @@
     ViewBag.Title = "Admin";
 }
 
-<div class="jumbotron">
-    <h1>Admin Dashboard</h1>
+<h1>Admin Dashboard</h1>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <h5>Quick access</h5>
+        <p>Quick links for admisitering common entities used in every season.</p>
+        <ul>
+            <li><a href="@Url.Action("Add", "Races")">Add Race</a></li>
+            <li><a href="@Url.Action("Add", "Drivers")">Add Driver</a></li>
+            <li><a href="@Url.Action("AddSeason", "Admin")">Add New Championhip</a></li>
+        </ul>
+    </div>
+    <div class="col-md-8">
+        <p>
+            Welcome to the administration dashboard. From this page you can access the main data CRUD options to the various aspects of ay season whih is tracked by this application.
+        </p>
+        <p>
+            You will also be able to access statistics about the site from this page too. in the furture. At some point.
+        </p>
+    </div>
+</div>
+
+
+<div class="row">
+
 </div>
