@@ -6,10 +6,11 @@ using System.Web.Mvc;
 
 namespace EntityFrameworkAndKnockout.Controllers
 {
-    public class TracksController : Controller
+    public class AdminController : Controller
     {
-        [AllowAnonymous]
-        public ActionResult List()
+        [HttpGet]
+        [Authorize]
+        public ActionResult Dashboard()
         {
             return View();
         }

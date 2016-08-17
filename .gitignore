@@ -10,4 +10,6 @@ WebLauncher/packages/*
 WebLauncherTests/bin/*
 WebLauncherTests/obj/*
 WebLauncherTests/packages/*
+WebLauncher/App_Data/*.mdf
+WebLauncher/App_Data/*.ldf
 packages/*

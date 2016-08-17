@@ -8,6 +8,7 @@ namespace EntityFrameworkAndKnockout.Controllers
 {
     public class TeamsController : Controller
     {
+        [AllowAnonymous]
         public ActionResult List()
         {
             return View();
