@@ -26,6 +26,11 @@ namespace EntityFrameworkAndKnockout
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            // ----------------------- View Models ----------------------- 
+
+            //bundles.Add(new ScriptBundle("~/bundles/admin-view-models").Include(
+            //    "~/Scripts/ViewModels/Admin/*.js"));
         }
     }
 }

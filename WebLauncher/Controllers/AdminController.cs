@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EntityFrameworkAndKnockout.Models.Admin.AddSeason;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -19,7 +20,11 @@ namespace EntityFrameworkAndKnockout.Controllers
         [Authorize]
         public ActionResult AddSeason()
         {
-            throw new NotImplementedException("Get on with it");
+            //TODO - limit this to years that haven't been added yet
+            var years = Enumerable.Range(1950, 2050).ToList();
+
+            var model = new AddSeasonViewModel { Years = years };
+            return View();
         }
     }
 }
