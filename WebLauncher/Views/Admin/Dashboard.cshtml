@@ -2,7 +2,7 @@
     ViewBag.Title = "Admin";
 }
 
-<div class="jumbotron">
+<div>
     <h1>Admin Dashboard</h1>
 
     <hr />
@@ -35,5 +35,5 @@
     <h2>New Season</h2>
     <p>Setup a new season</p>
 
-    @Html.ActionLink("Add New Season", "AddSeason", "Admin", new { @class="btn btn-primary" })
+    @Html.ActionLink("Add New Season", "AddSeason", "Season", null, new { @class="btn btn-primary" })
 </div>

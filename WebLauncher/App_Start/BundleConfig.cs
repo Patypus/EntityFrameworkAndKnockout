@@ -29,8 +29,8 @@ namespace EntityFrameworkAndKnockout
 
             // ----------------------- View Models ----------------------- 
 
-            //bundles.Add(new ScriptBundle("~/bundles/admin-view-models").Include(
-            //    "~/Scripts/ViewModels/Admin/*.js"));
+            bundles.Add(new ScriptBundle("~/bundles/addseason").Include(
+                "~/Scripts/ViewModels/Admin/AddSeasonViewModel.js"));
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace EntityFrameworkAndKnockout.Models.Admin.AddSeason
+namespace EntityFrameworkAndKnockout.Models.Season
 {
     public class AddSeasonViewModel
     {
