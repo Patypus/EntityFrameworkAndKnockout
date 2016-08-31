@@ -1,5 +1,9 @@
 ﻿var addSeasonViewModel = function (data) {
     var self = this;
-    debugger;
-    self.availableYears = ko.observableArray(data.Years);
+
+    self.availableYears = ko.observableArray(data.YearsWithNoCreatedSeasons);
+
+    self.addYear = function () {
+        debugger;
+    }
 };

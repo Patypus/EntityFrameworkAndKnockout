@@ -169,6 +169,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\Api\SeasonApiController.cs" />
     <Compile Include="Controllers\DriversController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RacesController.cs" />
@@ -179,13 +180,14 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Season\AddSeasonViewModel.cs" />
+    <Compile Include="Models\Season\ManageSeasonViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Admin\AddSeason.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -240,7 +242,7 @@
     <Content Include="Views\Drivers\List.cshtml" />
     <Content Include="Views\Races\List.cshtml" />
     <Content Include="Views\Admin\Dashboard.cshtml" />
-    <Content Include="Views\Season\AddSeason.cshtml" />
+    <Content Include="Views\Season\ManageSeason.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -11,12 +11,18 @@ namespace EntityFrameworkAndKnockout.Controllers
     {
         [HttpGet]
         [Authorize]
-        public ActionResult AddSeason()
+        public ActionResult ManageSeason()
         {
             //TODO - limit this to years that haven't been added yet
+            //TODO - get this into a service
             var years = Enumerable.Range(1950, 100).ToList();
-
-            var model = new AddSeasonViewModel { Years = years };
+            var otherYears = Enumerable.Range(1950, 100).ToList();
+           
+            var model = new ManageSeasonViewModel
+            {
+                YearsWithNoCreatedSeasons = years,
+                EditableSeasons = otherYears
+            };
             return View(model);
         }
     }

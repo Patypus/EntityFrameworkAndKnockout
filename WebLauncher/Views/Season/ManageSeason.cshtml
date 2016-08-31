@@ -1,0 +1,24 @@
+﻿
+@model EntityFrameworkAndKnockout.Models.Season.ManageSeasonViewModel
+@{
+    ViewBag.Title = "Add Season";
+}
+
+@Scripts.Render("~/bundles/addseason")
+@Styles.Render("~/Content/Admin/AddSeason.css")
+
+<h2>Add Season</h2>
+
+<div id="new-season-options">
+    <select id="year-picker" class="form-control year-picker" data-bind="options: availableYears"></select>
+
+    <button id="add-year-button" class="btn btn-success year-picker-button" data-bind="click: addYear">Create</button>
+</div>
+
+<script>
+    var rawData = @Html.Raw(Json.Encode(@Model));
+
+    var rootDiv = $('#new-season-options')[0];
+    var model = new addSeasonViewModel(rawData)
+    ko.applyBindings(model, rootDiv)
+</script>
