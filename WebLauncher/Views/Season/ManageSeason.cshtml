@@ -4,21 +4,46 @@
     ViewBag.Title = "Add Season";
 }
 
-@Scripts.Render("~/bundles/addseason")
-@Styles.Render("~/Content/Admin/AddSeason.css")
+@Scripts.Render("~/bundles/manageseason")
+@Styles.Render("~/Content/Admin/ManageSeason.css")
 
-<h2>Add Season</h2>
 
-<div id="new-season-options">
-    <select id="year-picker" class="form-control year-picker" data-bind="options: availableYears"></select>
-
-    <button id="add-year-button" class="btn btn-success year-picker-button" data-bind="click: addYear">Create</button>
+<div id="edit-season-open" class="manage-season-button">
+    <h2>Edit</h2>
+    <i class="fa fa-pencil fa-4x"></i>
 </div>
+
+<div id="add-season-open" class="manage-season-button">
+    <h2>Add</h2>
+    <i class="fa fa-plus fa-4x"></i>
+</div>
+
+<div id="edit-season-form" class="manage-season-form">
+    <h2>Edit Season</h2>
+
+    <div id="new-season-options">
+        <select id="year-picker" class="form-control year-picker" data-bind="options: editableYears"></select>
+
+        <button id="add-year-button" class="btn btn-success year-picker-button" data-bind="click: editYear">Edit</button>
+    </div>
+</div>
+
+<div id="add-season-form" class="manage-season-form">
+    <h2>Add Season</h2>
+
+    <div id="new-season-options">
+        <select id="year-picker" class="form-control year-picker" data-bind="options: createableYears"></select>
+
+        <button id="add-year-button" class="btn btn-success year-picker-button" data-bind="click: addYear">Create</button>
+    </div>
+</div>
+
+
 
 <script>
     var rawData = @Html.Raw(Json.Encode(@Model));
 
     var rootDiv = $('#new-season-options')[0];
-    var model = new addSeasonViewModel(rawData)
+    var model = new manageViewModel(rawData)
     ko.applyBindings(model, rootDiv)
 </script>
