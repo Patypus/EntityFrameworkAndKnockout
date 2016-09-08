@@ -1,6 +1,6 @@
 ﻿var manageViewModel = function (data) {
     var self = this;
-
+    debugger;
     self.createableYears = ko.observableArray(data.YearsWithNoCreatedSeasons);
     self.editableYears = ko.observableArray(data.EditableSeasons);
 

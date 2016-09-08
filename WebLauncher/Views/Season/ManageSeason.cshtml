@@ -8,50 +8,52 @@
 @Styles.Render("~/Content/Admin/ManageSeason.css")
 
 
-<div class="button-container">
-    <div id="view-season-open" class="manage-season-button" style="margin-right: 10px">
-        <h2>View</h2>
-        <i class="fa fa-eye fa-4x"></i>
+<div id="management-options">
+    <div class="button-container">
+        <div id="view-season-open" class="manage-season-button" style="margin-right: 10px">
+            <h2>View</h2>
+            <i class="fa fa-eye fa-4x"></i>
+        </div>
+
+        <div id="edit-season-open" class="manage-season-button" style="margin-right: 10px">
+            <h2>Edit</h2>
+            <i class="fa fa-pencil fa-4x"></i>
+        </div>
+
+        <div id="add-season-open" class="manage-season-button">
+            <h2>Add</h2>
+            <i class="fa fa-plus fa-4x"></i>
+        </div>
+
+    </div>
+    <div style="clear:both"></div>
+    <div id="view-season-form" class="manage-season-form">
+        <h2>View Season</h2>
+
+        <div id="view-season-options">
+            <select id="year-picker" class="form-control year-picker" data-bind="options: editableYears"></select>
+
+            <button id="add-year-button" class="btn btn-success year-picker-button" data-bind="click: viewYear">Edit</button>
+        </div>
+    </div>
+    <div id="edit-season-form" class="manage-season-form">
+        <h2>Edit Season</h2>
+
+        <div id="edit-season-options">
+            <select id="year-picker" class="form-control year-picker" data-bind="options: editableYears"></select>
+
+            <button id="add-year-button" class="btn btn-success year-picker-button" data-bind="click: editYear">Edit</button>
+        </div>
     </div>
 
-    <div id="edit-season-open" class="manage-season-button" style="margin-right: 10px">
-        <h2>Edit</h2>
-        <i class="fa fa-pencil fa-4x"></i>
-    </div>
+    <div id="add-season-form" class="manage-season-form">
+        <h2>Add Season</h2>
 
-    <div id="add-season-open" class="manage-season-button">
-        <h2>Add</h2>
-        <i class="fa fa-plus fa-4x"></i>
-    </div>
+        <div id="new-season-options">
+            <select id="year-picker" class="form-control year-picker" data-bind="options: createableYears"></select>
 
-</div>
-<div style="clear:both"></div>
-<div id="view-season-form" class="manage-season-form">
-    <h2>View Season</h2>
-
-    <div id="new-season-options">
-        <select id="year-picker" class="form-control year-picker" data-bind="options: editableYears"></select>
-
-        <button id="add-year-button" class="btn btn-success year-picker-button" data-bind="click: viewYear">Edit</button>
-    </div>
-</div>
-<div id="edit-season-form" class="manage-season-form">
-    <h2>Edit Season</h2>
-
-    <div id="new-season-options">
-        <select id="year-picker" class="form-control year-picker" data-bind="options: editableYears"></select>
-
-        <button id="add-year-button" class="btn btn-success year-picker-button" data-bind="click: editYear">Edit</button>
-    </div>
-</div>
-
-<div id="add-season-form" class="manage-season-form">
-    <h2>Add Season</h2>
-
-    <div id="new-season-options">
-        <select id="year-picker" class="form-control year-picker" data-bind="options: createableYears"></select>
-
-        <button id="add-year-button" class="btn btn-success year-picker-button" data-bind="click: addYear">Create</button>
+            <button id="add-year-button" class="btn btn-success year-picker-button" data-bind="click: addYear">Create</button>
+        </div>
     </div>
 </div>
 
@@ -60,7 +62,7 @@
 <script>
     var rawData = @Html.Raw(Json.Encode(@Model));
 
-    var rootDiv = $('#new-season-options')[0];
+    var rootDiv = $('#management-options')[0];
     var model = new manageViewModel(rawData)
     ko.applyBindings(model, rootDiv)
 </script>
