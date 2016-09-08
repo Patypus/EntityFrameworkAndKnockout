@@ -26,6 +26,15 @@
 
 </div>
 <div style="clear:both"></div>
+<div id="view-season-form" class="manage-season-form">
+    <h2>View Season</h2>
+
+    <div id="new-season-options">
+        <select id="year-picker" class="form-control year-picker" data-bind="options: editableYears"></select>
+
+        <button id="add-year-button" class="btn btn-success year-picker-button" data-bind="click: viewYear">Edit</button>
+    </div>
+</div>
 <div id="edit-season-form" class="manage-season-form">
     <h2>Edit Season</h2>
 

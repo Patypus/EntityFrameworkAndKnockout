@@ -11,4 +11,8 @@
     self.editYear = function () {
         debugger;
     }
+
+    self.viewYear = function () {
+        debugger;
+    }
 };
